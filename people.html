@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>People Database</h1>
+        <div class="people-info">
+            <h2>Add New Person</h2>
+            <form id="add-person-form" onsubmit="addPerson(event)">
+                <div class="form-group">
+                    <label for="person-name">Name:</label>
+                    <input type="text" id="person-name" required minlength="3" placeholder="e.g., John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="person-reg">Registration Number:</label>
+                    <input type="text" id="person-reg" required pattern="2402424\d{5}" placeholder="e.g., 240242400001">
+                </div>
+                <div class="form-group">
+                    <label for="person-region">Region:</label>
+                    <input type="text" id="person-region" required minlength="3" placeholder="e.g., Dar es Salaam">
+                </div>
+                <div class="form-group">
+                    <label for="person-favourite">Favourite:</label>
+                    <input type="text" id="person-favourite" required minlength="3" placeholder="e.g., Ugali">
+                </div>
+                <button type="submit">Add Person</button>
+            </form>
+            <p id="add-person-message"></p>
+
+            <h2>Registered People</h2>
+            <table id="people-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Registration Number</th>
+                        <th>Region</th>
+                        <th>Favourite</th>
+                    </tr>
+                </thead>
+                <tbody id="people-tbody">
+                    <!-- Populated by JavaScript -->
+                </tbody>
+            </table>
+            <a href="Registration.html" class="back-link">Back to Sign-In</a>
+        </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>

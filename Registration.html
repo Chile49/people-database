@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration & Sign-In Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+
+        <!-- Registration Form -->
+        <div class="form-container" id="register-form">
+            <h2>Register</h2>
+            <form id="registration-form" onsubmit="registerUser(event)">
+                <div class="form-group">
+                    <label for="reg-username">Username:</label>
+                    <input type="text" id="reg-username" required minlength="3">
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password" required minlength="6">
+                </div>
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="#signin-form">Sign In</a></p>
+            </form>
+            <p id="reg-message"></p>
+        </div>
+
+        <!-- Sign-In Form -->
+        <div class="form-container" id="signin-form">
+            <h2>Sign In to View People Directory</h2>
+            <p class="sign-in-message">Enter your email and password to access the list of registered people.</p>
+            <form id="signin-form" onsubmit="signInUser(event)">
+                <div class="form-group">
+                    <label for="signin-email">Email:</label>
+                    <input type="email" id="signin-email" required placeholder="e.g., user@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="signin-password">Password:</label>
+                    <input type="password" id="signin-password" required placeholder="Enter your password">
+                </div>
+                <button type="submit">Sign In</button>
+                <p>Don't have an account? <a href="#register-form">Register</a></p>
+            </form>
+            <p id="signin-message"></p>
+        </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>
